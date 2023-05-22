@@ -11,7 +11,7 @@ const client = new Client(clientOptions);
 const token = process.env.DISCORD_KEY;
 
 client.on('ready', (c) => {
-	schedule.scheduleJob('0 */12 * * *', () => sendMonkeyPicture(c));
+	schedule.scheduleJob('0/5 * * * *', () => sendMonkeyPicture(c));
 });
 
 client.login(token);
